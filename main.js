@@ -45,8 +45,17 @@ addEventListener('load', () => {
       e.preventDefault();
       const textAreaInput = document.getElementById('textAreaInput');
 
-      addItemFromInput(textAreaInput.value);
-      textAreaInput.value = '';
+      if (textAreaInput.value !== '') {
+        addItemFromInput(textAreaInput.value);
+      } else {
+        textAreaInput.placeholder = 'Type something';
+        textAreaInput.style = 'background-color:#DCDF28';
+
+        setTimeout(() => {
+          textAreaInput.style = 'background-color:none';
+          textAreaInput.placeholder = 'What should I do...';
+        }, 1000);
+      }
     }
   });
 
@@ -55,9 +64,14 @@ addEventListener('load', () => {
 
     if (textAreaInput.value !== '') {
       addItemFromInput(textAreaInput.value);
-      textAreaInput.value = '';
     } else {
-      alert('Please enter something on textarea.');
+      textAreaInput.placeholder = 'Type something';
+      textAreaInput.style = 'background-color:#DCDF28';
+
+      setTimeout(() => {
+        textAreaInput.style = 'background-color:none';
+        textAreaInput.placeholder = 'What should I do...';
+      }, 1000);
     }
   });
 });
