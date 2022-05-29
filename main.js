@@ -43,11 +43,21 @@ addEventListener('load', () => {
   document.querySelector('.todo__input').addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
-      addItemFromInput();
+      const textAreaInput = document.getElementById('textAreaInput');
+
+      addItemFromInput(textAreaInput.value);
+      textAreaInput.value = '';
     }
   });
 
-  document
-    .querySelector('.todo__create')
-    .addEventListener('click', () => addItemFromInput());
+  document.querySelector('.todo__create').addEventListener('click', () => {
+    const textAreaInput = document.getElementById('textAreaInput');
+
+    if (textAreaInput.value !== '') {
+      addItemFromInput(textAreaInput.value);
+      textAreaInput.value = '';
+    } else {
+      alert('Please enter something on textarea.');
+    }
+  });
 });
