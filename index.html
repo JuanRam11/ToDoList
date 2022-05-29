@@ -32,55 +32,28 @@
     </svg>
 
     <div class="todo">
-      <div class="todo__header">
-        <div class="todo__menu">
-          <div class="todo__title">ToDo List</div>
+      <div>
+        <div class="todo__header">
+          <div class="todo__menu">
+            <div class="todo__title">ToDo List</div>
+          </div>
+          <div class="todo__date">
+            <div class="todo__fulldate"><p id="pDate">date</p></div>
+          </div>
         </div>
-        <div class="todo__date">
-          <div class="todo__fulldate"><p id="pDate">December 6, 2021</p></div>
+        <div class="todo__body">
+          <ul id="contList" class="todo__items-container"></ul>
         </div>
-      </div>
-      <div class="todo__body">
-        <ul class="todo__items-container">
-          <div class="alignCheckBoxList">
-            <input
-              class="checkBoxStyle"
-              type="checkbox"
-              id="description"
-              value="Solve the task"
-            />
-            <label for="description">Read the description</label>
+        <div class="todo__add">
+          <textarea
+            class="todo__input"
+            placeholder="What should I do..."
+          ></textarea>
+          <div class="todo__create">
+            <svg viewBox="0 0 32 32" class="icon">
+              <use xlink:href="#icon-plus"></use>
+            </svg>
           </div>
-          <div class="alignCheckBoxList">
-            <input
-              class="checkBoxStyle"
-              type="checkbox"
-              id="task"
-              value="Solve the task"
-            />
-            <label for="task">Solve the task</label>
-          </div>
-
-          <div class="alignCheckBoxList">
-            <input
-              class="checkBoxStyle"
-              type="checkbox"
-              id="solution"
-              value="Submit the solution"
-            />
-            <label for="solution">Submit the solution</label>
-          </div>
-        </ul>
-      </div>
-      <div class="todo__add">
-        <textarea
-          class="todo__input"
-          placeholder="What should I do..."
-        ></textarea>
-        <div class="todo__create">
-          <svg viewBox="0 0 32 32" class="icon">
-            <use xlink:href="#icon-plus"></use>
-          </svg>
         </div>
       </div>
     </div>
