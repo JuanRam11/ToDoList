@@ -36,6 +36,7 @@ svg {
   max-width: 500px;
   box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  margin: auto;
 }
 
 .todo__header {
@@ -176,4 +177,21 @@ input[type='checkbox'] {
 .alignCheckBoxList {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  /*   justify-content: space-between; */
 }
+
+.deleteButton {
+  background-color: rgba(230, 21, 21, 0.753);
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #808080;
+}
+
+.deleteButtonClick:focus {
+  background-color: green;
+}
+
+/* ul#contList :nth-child(3) {
+  background-color: red;
+} */
